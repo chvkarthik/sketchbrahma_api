@@ -13,7 +13,17 @@ export class DataService {
     this.config = injector.get(APP_CONFIG)
    }
 
-   getBreweries(){
-     return this.httpClient.get(this.config.BREWERIES);
+   getBreweries(data:any){
+     return this.httpClient.get(this.config.BREWERIES+'?'+data);
    }
+
+   searchBreweries(data:any){
+     return this.httpClient.get(this.config.SEARCH_BREWERIES+'?query='+data);
+   }
+
+   getBrewery(data:any){
+    return this.httpClient.get(this.config.BREWERIES+'/'+data);
+   }
+
+   
 }

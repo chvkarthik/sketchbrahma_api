@@ -1,7 +1,6 @@
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { AppConfig, APP_CONFIG } from './app.config';
 
@@ -11,7 +10,8 @@ import { AppConfig, APP_CONFIG } from './app.config';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [{provide: APP_CONFIG, useValue: AppConfig}],
   bootstrap: [AppComponent]
